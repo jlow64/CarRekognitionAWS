@@ -20,10 +20,11 @@ def main():
             continue
         else:
             break
-
+    print(testlabel, imgurl)
     print('Labels generating...')
     try:
         respgen.generate_data(imgurl, 'URL' if 'http' in imgurl else 'LOCAL' )
     except:
         print("")
     return testlabel.lower()
+

@@ -8,5 +8,5 @@ def generate_data(url, flag):
         rekresp = client.detect_labels(Image={'Bytes': imgbytes})
         with open('data.json', 'w') as f:
             f.write(json.dumps(rekresp))
-    except:
-        print('Please enter a valid image url')
+    except Exception as e:
+        print(e)
